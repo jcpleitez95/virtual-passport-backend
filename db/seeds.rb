@@ -3,5 +3,13 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# 
+User.destroy_all 
+Picture.destroy_all 
+Comment.destroy_all 
+
+
+jc = User.create(name: "JC", age: 25, email: "jcpleitez@outlook.com", profile_picture: "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+picture = Picture.create(image_url: "https://www.privateislandsonline.com/uploads/722/5ec5990cba03c.jpg", caption: "Look at this beach!", user_id: jc.id, likes: 25)
+Comment.create(picture_id: picture.id, content: "This is beautiful!")
+
