@@ -11,5 +11,7 @@ Comment.destroy_all
 
 jc = User.create(name: "JC", age: 25, email: "jcpleitez@outlook.com", profile_picture: "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
 picture = Picture.create(image_url: "https://www.privateislandsonline.com/uploads/722/5ec5990cba03c.jpg", caption: "Look at this beach!", user_id: jc.id, likes: 25)
+bek = User.create(name: "Bek", age: 25, email: "jcpleitez@outlook.com", profile_picture: "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+picture2 = Picture.create(image_url: "https://www.privateislandsonline.com/uploads/722/5ec5990cba03c.jpg", caption: "I went there also!", user_id: bek.id, likes: 2)
 Comment.create(picture_id: picture.id, content: "This is beautiful!")
-
+Comment.create(picture_id: picture2.id, content: "Wow!")
