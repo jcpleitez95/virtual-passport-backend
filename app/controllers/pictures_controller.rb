@@ -30,6 +30,6 @@ class PicturesController < ApplicationController
     private
 
     def picture_params
-        params.permit(:image_url, :likes, :caption)
+        params.permit(:image_url, :likes, :caption, :user_id, :picture)
     end
 end
